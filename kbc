@@ -1,0 +1,42 @@
+# This is just like a KBC   
+
+
+qaslist = [
+    ["1. Who is the current Railway Minister of India?", "A. Mamta Banarjee", "B. Ram Vilash", "C. Ashwini Vaishnaw", "D. Piyush Goyal"],
+    ["2. What is the capital city of France?", "A. Madrid", "B. Rome", "C. Paris", "D. Berlin"],
+    ["3. Who wrote the play 'Hamlet'?", "A. William Shakespeare", "B. Charles Dickens", "C. Jane Austen", "D. Leo Tolstoy"],
+    ["4. Which planet is known as the 'Red Planet'?", "A. Venus", "B. Jupiter", "C. Mars", "D. Saturn"],
+    ["5. What is the chemical symbol for water?", "A. W", "B. H2O", "C. O2", "D. H2SO4"],
+    ["6. Who is the author of 'The Great Gatsby'?", "A. Ernest Hemingway", "B. F. Scott Fitzgerald", "C. Mark Twain", "D. William Faulkner"],
+    ["7. What is the currency of Japan?", "A. Yen", "B. Yuan", "C. Euro", "D. Dollar"],
+    ["8. Which country is known as the 'Land of the Rising Sun'?", "A. China", "B. India", "C. Japan", "D. South Korea"],
+    ["9. What is the tallest mountain in the world?", "A. Mount Kilimanjaro", "B. Mount Everest", "C. K2", "D. Mount Fuji"],
+    ["10. Who painted the Mona Lisa?", "A. Michelangelo", "B. Leonardo da Vinci", "C. Vincent van Gogh", "D. Pablo Picasso"]
+]
+
+answers = ["C", "C", "A", "C", "B", "B", "A", "C", "B", "B"]
+count =1000  
+rupeeswin = 0
+print("do you want to play KBC press y for playing or press n for exit")
+enter = input()
+if(enter == "y"):
+  i=0
+  while(i<=10):
+    print("This is your No.",i+1," for the value ",count)
+    for k in range(5):
+      print(qaslist[i][k])
+    print("Choose your answer and enter A or B or C or D")
+    ans = input()
+    if(answers[i]==ans):
+      rupeeswin = rupeeswin+count
+      count = count*2
+      print("your answer is correct and your current rupees is ",rupeeswin)
+    else:
+      print("your answer is incorrect")
+      print("congrats you win of $",rupeeswin)  
+      break
+    i=i+1
+    
+        
+
+
